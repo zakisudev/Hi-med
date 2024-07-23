@@ -1,6 +1,6 @@
 // pages/contact.js
 import Head from 'next/head';
-import Header from '../../components/Header';
+import Header from '../components/Header';
 
 export default function Contact() {
   return (

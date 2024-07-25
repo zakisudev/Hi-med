@@ -110,7 +110,7 @@ export default function Book() {
         </section>
       </main>
 
-      <div className="flex mt-20"></div>
+      <div className="flex mt-80"></div>
 
       <Footer />
     </div>

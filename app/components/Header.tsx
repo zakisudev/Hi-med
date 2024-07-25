@@ -46,9 +46,12 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <button className="px-10 py-3 bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl font-semibold transition-all duration-200">
+        <Link
+          href="/book"
+          className="px-10 py-3 bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl text-lg font-bold transition-all duration-200"
+        >
           Get An Appointment
-        </button>
+        </Link>
       </div>
     </header>
   );

@@ -30,7 +30,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <p className="text-[16px]">{description}</p>
       </div>
       <Link
-        href={`/${link}`}
+        href={`categories/${link}`}
         className="text-lg font-bold flex items-center gap-3 w-fit"
       >
         <p className="text-[#36b2eb]">Learn more</p>

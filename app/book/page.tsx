@@ -61,7 +61,7 @@ export default function Book() {
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="phoneNumber" className="text-xl">
-                  PhoneNumber
+                  Phone number
                 </label>
                 <input
                   type="phoneNumber"

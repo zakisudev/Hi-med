@@ -5,6 +5,7 @@ import CategoryCard from '../components/CategoryCard';
 import TestimonialCard from '../components/TestimonialCard';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -32,12 +33,18 @@ export default function Home() {
                 Achieve Your Health Goals with Confidence.{' '}
               </p>
               <div className="flex gap-10 mt-5">
-                <button className="text-lg px-10 py-3 bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl font-bold transition-all duration-200">
+                <Link
+                  href="/book"
+                  className="text-lg px-10 py-3 bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl font-bold transition-all duration-200"
+                >
                   Get An Appointment
-                </button>
-                <button className="text-lg w-[230px] h-[54px] rounded-xl border-2 border-[#29a8e2] hover:font-[900] font-semibold transition-all duration-200">
+                </Link>
+                <Link
+                  href="/categories"
+                  className="flex justify-center items-center text-lg w-[230px] h-[54px] rounded-xl border-2 border-[#29a8e2] hover:shadow-inner font-semibold transition-all duration-200"
+                >
                   See Categories
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -198,9 +205,12 @@ export default function Home() {
             />
           </div>
           <div className="flex justify-center items-center mt-10">
-            <button className="px-16 py-3 font-bold bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl transition-all duration-200">
+            <Link
+              href="/categories"
+              className="px-16 py-3 font-bold bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl transition-all duration-200"
+            >
               See All Categories
-            </button>
+            </Link>
           </div>
         </section>
 

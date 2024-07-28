@@ -68,7 +68,7 @@ const page = () => {
     {
       title: 'Results',
       final: true,
-      component: <Results />,
+      component: <Results patData={patData} setStep={setStep} />,
     },
   ];
 

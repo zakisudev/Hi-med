@@ -1,9 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '@/lib/prisma';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { extractSlugFromUrl } from '@/app/utils/helpers';
 
-export async function GET(req: NextApiRequest) {
+export async function handler(req: NextRequest) {
   if (req.method === 'GET') {
     try {
       const slug = extractSlugFromUrl(req.url || '');

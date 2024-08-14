@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -9,8 +11,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'Hi-Med | Health Care',
-  description: 'Hi-Med is a health care provider.',
+  title: 'Hi-Med | ♥ Health Care and Consultation',
+  description: 'Hi-Med is a health care and consultation provider for patients.',
 };
 
 export default function RootLayout({
@@ -20,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

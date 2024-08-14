@@ -1,24 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import CategoryCard from '../components/CategoryCard';
-import TestimonialCard from '../components/TestimonialCard';
+import CategoryCard from '@/components/CategoryCard';
+import TestimonialCard from '@/components/TestimonialCard';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Link from 'next/link';
+import Spinner from '@/components/ui/Spinner';
+import { fetchCategories } from '../services/api';
 
-export default function Home() {
+export default async function Home() {
+  const categories = await fetchCategories();
+
   return (
     <div className="min-h-screen px-[0.5rem] -mt-[110px] w-full flex flex-col justify-center items-center">
-      <Head>
-        <title>Medical Consultation</title>
-        <meta
-          name="description"
-          content="Medical consultation app for patients"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className="flex flex-col justify-center items-center w-full">
         {/* Hero */}
         <section className="flex min-h-screen justify-center items-center w-full bg-[#F2FFFB]">
@@ -166,52 +160,31 @@ export default function Home() {
               well-being.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-5 w-full max-w-[1440px] place-items-center">
-            <CategoryCard
-              imgSrc={'/categ-01.png'}
-              title={'Gynecology'}
-              description="This is the branch of medicine that deals with the reproductive health of girls and women."
-              link="/gynecology"
-            />
-            <CategoryCard
-              imgSrc={'/categ-02.png'}
-              title={'Pediatrics'}
-              description="This is the branch of medicine that deals with children and their diseases."
-              link="/pediatrics"
-            />
-            <CategoryCard
-              imgSrc={'/categ-03.png'}
-              title={'Neurology'}
-              description="This is the branch of medicine that deals with disorders and diseases of the nervous system"
-              link="/neurology"
-            />
-            <CategoryCard
-              imgSrc={'/categ-04.png'}
-              title={'Opthalmology'}
-              description="This is the branch of medicine that deals with the diagnosis and treatments of disorders of the eye."
-              link="/opthalmology"
-            />
-            <CategoryCard
-              imgSrc={'/categ-05.png'}
-              title="Otolaryngology"
-              description="This is the branch of medicine that deals with diseases of the ear, nose and throat."
-              link="/otolaryngology"
-            />
-            <CategoryCard
-              imgSrc={'/categ-06.png'}
-              title={'Dermatology'}
-              description="This is the branch of medicine that deals with the diagnosis and treatment of skin disorders."
-              link="/dermatology"
-            />
-          </div>
-          <div className="flex justify-center items-center mt-10">
-            <Link
-              href="/categories"
-              className="px-16 py-3 font-bold bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl transition-all duration-200"
-            >
-              See All Categories
-            </Link>
-          </div>
+          {categories ? (
+            <>
+              <div className="grid grid-cols-3 gap-5 w-full max-w-[1440px] mx-auto place-items-center">
+                {categories && Array.isArray(categories) && categories.length > 0 && categories?.slice(0, 6)?.map((cat: any) => (
+                  <CategoryCard
+                    key={cat.id}
+                    imgSrc={"/categ-01.png"}
+                    title={cat.name}
+                    description={cat.description}
+                    link={`${cat.name?.toLowerCase()}`}
+                  />
+                ))}
+              </div>
+              <div className="flex justify-center items-center mt-10">
+                <Link
+                  href="/categories"
+                  className="px-16 py-3 font-bold bg-[#29a8e2] hover:bg-[#2d93c3] text-white rounded-xl transition-all duration-200"
+                >
+                  See All Categories
+                </Link>
+              </div>
+            </>
+          ) : (
+            <Spinner />
+          )}
         </section>
 
         {/* Testimonials */}

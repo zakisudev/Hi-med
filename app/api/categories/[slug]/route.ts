@@ -1,8 +1,8 @@
 import prisma from '@/lib/prisma';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { extractSlugFromUrl } from '@/app/utils/helpers';
 
-export async function handler(req: NextRequest) {
+export async function handler(req: Request) {
   if (req.method === 'GET') {
     try {
       const slug = extractSlugFromUrl(req.url || '');

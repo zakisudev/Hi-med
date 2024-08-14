@@ -1,5 +1,4 @@
 import prisma from '@/lib/prisma';
-import { Category } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
@@ -12,7 +11,7 @@ export async function GET(req: NextRequest) {
           { status: 200 }
         );
       }
-      const cats = categories.map((category: Category) => {
+      const cats = categories.map((category: any) => {
         return {
           ...category,
           content: JSON.parse(category.content as string),

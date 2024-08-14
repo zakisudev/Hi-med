@@ -22,7 +22,8 @@ export type CategoryDataType = {
   id: string;
   name: string;
   description: string;
-  content: CategoryContentType[];
+  content: any;
+  image: string;
   createdAt: string;
   updatedAt: string;
 };

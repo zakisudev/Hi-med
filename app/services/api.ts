@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "https://hi-med.zakisu.com/api";
 
 export const fetchCategories = async () => {
   const res = await fetch(`${BASE_URL}/categories`);

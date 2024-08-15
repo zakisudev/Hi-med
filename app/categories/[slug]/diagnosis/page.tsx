@@ -81,7 +81,6 @@ const Page: React.FC<CategoryPageProps> = ({ params }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
       <main className="flex-1 flex flex-col w-full justify-start items-center">
         <section className="flex flex-col gap-24 w-full max-w-[1440px] py-20">
           <div className="flex flex-col gap-10">
@@ -120,7 +119,6 @@ const Page: React.FC<CategoryPageProps> = ({ params }) => {
           {steps[step].component}
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

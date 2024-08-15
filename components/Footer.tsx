@@ -31,7 +31,7 @@ const Footer = () => {
                   height={40}
                   quality={100}
                   src={'/Instagram.svg'}
-                  alt="Instagram"
+                  alt="ig"
                   className="p-2 hover:p-1 transition-all duration-200"
                 />
               </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
                   height={40}
                   quality={100}
                   src={'/Linkedin.svg'}
-                  alt="linkedin"
+                  alt="ln"
                   className="p-2 hover:p-1 transition-all duration-200"
                 />
               </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
                   height={40}
                   quality={100}
                   src={'/Email.svg'}
-                  alt="email"
+                  alt="em"
                   className="p-2 hover:p-1 transition-all duration-200"
                 />
               </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                   height={40}
                   quality={100}
                   src={'/Whatsapp.svg'}
-                  alt="whatsapp"
+                  alt="wa"
                   className="p-2 hover:p-1 transition-all duration-200"
                 />
               </Link>

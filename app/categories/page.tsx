@@ -17,8 +17,6 @@ export default async function Category() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
       <main className="flex-1 flex flex-col w-full justify-start items-center">
         <section className="flex w-full h-[450px]">
           <div
@@ -51,7 +49,6 @@ export default async function Category() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

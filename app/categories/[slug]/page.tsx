@@ -26,7 +26,6 @@ const Page: React.FC<CategoryPageProps> = async ({ params }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Header /> */}
       {!categoryData ? (
         <Spinner />
       ) : (
@@ -187,7 +186,6 @@ const Page: React.FC<CategoryPageProps> = async ({ params }) => {
         </main>
       )}
 
-      {/* <Footer /> */}
     </div>
   );
 };

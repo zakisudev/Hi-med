@@ -1,9 +1,6 @@
 import Head from 'next/head';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import CategoryCard from '@/components/CategoryCard';
-import Spinner from '@/components/ui/Spinner'; // Assuming you have a Spinner component
-import { CategoriesState } from '@/types/categoryType';
+import Spinner from '@/components/ui/Spinner';
 import { fetchCategories } from '../services/api';
 
 export default async function Category() {

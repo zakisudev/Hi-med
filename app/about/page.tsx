@@ -7,17 +7,6 @@ import Footer from '@/components/Footer';
 export default function About() {
   return (
     <div className="min-h-screen flex-col flex justify-center items-center">
-      <Head>
-        <title>About Us</title>
-        <meta
-          name="description"
-          content="Learn more about our medical consultation app"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header />
-
       <main className="flex-1 flex flex-col w-full justify-start items-center">
         <section className="flex w-full h-[450px]">
           <div
@@ -156,8 +145,6 @@ export default function About() {
           </section>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

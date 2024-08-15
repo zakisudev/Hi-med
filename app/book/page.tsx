@@ -5,15 +5,6 @@ import Footer from '@/components/Footer';
 export default function Book() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-      <Head>
-        <title>Contact Us</title>
-        <meta
-          name="description"
-          content="Book an appointment now to get checked"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className="flex-1 flex min-h-screen flex-col w-full justify-start items-center">
         <section className="flex w-full h-[450px] relative mb-20">
           <div

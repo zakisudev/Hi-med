@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 import React, { useState } from 'react';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import { diagnosisData } from './diagnosisTypes';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -75,12 +73,6 @@ const Page: React.FC<CategoryPageProps> = ({ params }) => {
 
   return (
     <div className="min-h-screen flex-col flex justify-center items-center">
-      <Head>
-        <title>{params.slug} diagnosis</title>
-        <meta name="description" content="Start your diagnosis here" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className="flex-1 flex flex-col w-full justify-start items-center">
         <section className="flex flex-col gap-24 w-full max-w-[1440px] py-20">
           <div className="flex flex-col gap-10">
@@ -108,11 +100,7 @@ const Page: React.FC<CategoryPageProps> = ({ params }) => {
                 height: '400px',
               }}
             >
-              <h1 className="text-[36px] font-bold text-center">{params.slug} Diagnosis</h1>
-              {/* <p className="text-[20px] max-w-[570px] text-center">
-                This is the branch of medicine that deals with the reproductive
-                health of girls and women.
-              </p> */}
+              <h1 className="text-[36px] font-bold text-center">{params.slug.charAt(0).toUpperCase() + params.slug.slice(1)} Diagnosis</h1>
             </div>
           </div>
 

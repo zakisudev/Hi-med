@@ -19,7 +19,6 @@ export async function GET(req: NextRequest) {
       })
       return NextResponse.json(cats);
     } catch (error) {
-      console.log(error);
       return NextResponse.json(
         { message: 'Something went wrong' },
         { status: 200 }

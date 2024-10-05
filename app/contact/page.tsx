@@ -14,8 +14,6 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
       <main className="flex-1 flex min-h-screen flex-col w-full justify-start items-center">
         <section className="flex w-full h-[450px] relative mb-20">
           <div

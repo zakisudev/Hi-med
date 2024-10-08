@@ -28,7 +28,7 @@ export default function Header() {
   , [isMenuOpen]);
 
   return (
-    <header className="flex sticky top-0 w-full h-[60px] lg:h-[110px] bg-slate-100 shadow z-50 px-10">
+    <header className="flex sticky top-0 w-full h-[60px] lg:h-[110px] bg-slate-100 shadow z-50 px-5 lg:px-10">
       <div className="flex max-w-[1460px] w-full mx-auto justify-between items-center">
         <button onClick={()=> handlePath('/')} className="w-[36px] h-[54px] lg:h-[72px]">
           <Image width={36} height={72} src="/Logo.svg" alt="logo" className="w-full h-full object-contain"/>

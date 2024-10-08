@@ -11,12 +11,13 @@ export async function GET(req: NextRequest) {
           { status: 200 }
         );
       }
+
       const cats = categories.map((category: any) => {
         return {
           ...category,
           content: JSON.parse(category.content as string),
         };
-      })
+      });
       return NextResponse.json(cats);
     } catch (error) {
       return NextResponse.json(

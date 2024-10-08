@@ -16,7 +16,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   link,
 }) => {
   return (
-    <div className="flex flex-col justify-between w-[450px] h-[600px] bg-white rounded-2xl py-7 px-5 shadow-lg">
+    <div className="flex flex-col justify-between w-full max-w-[450px] h-full max-h-[600px] bg-white rounded-2xl py-7 px-5 shadow-lg">
       <div className="flex flex-col gap-7 object-cover">
         <Image
           width={500}

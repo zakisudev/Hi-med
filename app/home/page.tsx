@@ -156,10 +156,10 @@ export default async function Home() {
             <h3 className="uppercase font-extrabold text-[#226699] text-center">
               CATEGORIES
             </h3>
-            <h2 className="text-[#121212] text-[40px] text-center lg:text-left">
+            <h2 className="text-[#121212] text-responsiveTag text-center lg:text-left">
               Explore Different Health Categories
             </h2>
-            <p className="max-w-[853px] text-center text-[20px]">
+            <p className="max-w-[853px] text-center text-responsiveText">
               Navigate our comprehensive health categories to access expert
               insights, tips, and resources tailored to specific areas of
               well-being.
@@ -199,7 +199,7 @@ export default async function Home() {
               <h3 className="uppercase font-extrabold text-[#226699] text-center">
                 TESTIMONIALS
               </h3>
-              <h2 className="text-[#121212] text-[40px] ">
+              <h2 className="text-[#121212] text-responsiveTag ">
                 What our Patients are Saying
               </h2>
             </div>

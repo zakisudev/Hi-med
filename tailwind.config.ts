@@ -16,7 +16,7 @@ const config: Config = {
       },
       fontSize: {
         responsiveHeader: 'clamp(40px, 4vw, 70px)',
-        responsiveTag: 'clamp(25px, 3vw, 50px)',
+        responsiveTag: 'clamp(25px, 3vw, 48px)',
         responsiveNews: 'clamp(12px, 2vw, 20px)',
         responsiveText: 'clamp(16px, 2vw, 20px)',
         responsiveParagraph: 'clamp(15px, 2vw, 25px)',
